@@ -34,9 +34,9 @@ public class RESequence {
 	 * @param seq the sequence to be checked
 	 * @return Returns the nucleotide number of the cut sites
 	 */
-	public ArrayList<Integer> getCutSites(DNASequence seq)
+	public ArrayList<Integer> getCutSites(String seq)
 	{
-		String sSeq1 = seq.getSequenceAsString().toUpperCase();
+		String sSeq1 = seq.toUpperCase();
 		//String sSeq2 = seq.getReverseComplement().getSequenceAsString().toUpperCase();
 		ArrayList<Integer> returnVals = new ArrayList<Integer>();
 		//search sSeq1 first
