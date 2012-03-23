@@ -59,4 +59,20 @@ public class RESequence {
 		}
 		return returnVals;
 	}
+	
+	public static ArrayList<CutSite> getAllCutSites(String seq, ArrayList<RESequence> enzymes)
+	{
+		ArrayList<CutSite> returnVal = new ArrayList<CutSite>();
+		
+		for(int i=0;i<enzymes.size();i++)
+		{
+			ArrayList<Integer> sites = enzymes.get(i).getCutSites(seq);
+			for(int j=0;j<sites.size();j++)
+			{
+				returnVal.add(new CutSite(enzymes.get(i),sites.get(j)));
+			}
+		}
+		
+		return returnVal;
+	}
 }
