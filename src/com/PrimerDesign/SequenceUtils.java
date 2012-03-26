@@ -75,7 +75,7 @@ public class SequenceUtils {
 	 * G = GGN
 	 * H = CAY
 	 * I = AUH
-	 * L = YUR, CUN
+	 * L = UUR, CUN
 	 * K = AAR
 	 * M = AUG
 	 * F = UUY
@@ -111,7 +111,7 @@ public class SequenceUtils {
 		if(threeNtEquals(codon, "GGN")) return 'G';
 		if(threeNtEquals(codon, "CAY")) return 'H';
 		if(threeNtEquals(codon, "AUH")) return 'I';
-		if(threeNtEquals(codon, "YUR") || threeNtEquals(codon, "CUN")) return 'L';
+		if(threeNtEquals(codon, "UUR") || threeNtEquals(codon, "CUN")) return 'L';
 		if(threeNtEquals(codon, "AAR")) return 'K';
 		if(threeNtEquals(codon, "AUG")) return 'M';
 		if(threeNtEquals(codon, "UUY")) return 'F';
@@ -145,7 +145,7 @@ public class SequenceUtils {
 		case 'G': return "GGN";
 		case 'H': return "CAY";
 		case 'I': return "AUH";
-		case 'L': return "YURCUN";
+		case 'L': return "UURCUN";
 		case 'K': return "AAR";
 		case 'M': return "AUG";
 		case 'F': return "UUY";

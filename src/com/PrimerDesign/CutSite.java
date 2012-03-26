@@ -18,9 +18,10 @@ public class CutSite
 		return (enzyme.sName.equals("")?"N/A":enzyme.sName) + " @ " + site;
 	}
 	
-	public boolean equals(CutSite pCutSite)
+	@Override
+	public boolean equals(Object pCutSite)
 	{
-		return this.enzyme.sName.equals(pCutSite.enzyme.sName) && this.site == pCutSite.site;
+		return (pCutSite instanceof CutSite ? this.enzyme.sName.equals(((CutSite)pCutSite).enzyme.sName) && this.site == ((CutSite)pCutSite).site : false);
 	}
 	
 	public static int countSites(ArrayList<CutSite> pSites, RESequence pEnzyme)
